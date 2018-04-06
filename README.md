@@ -1,4 +1,4 @@
 # proWork.github.io
 Website proWork
 
-In this website I take a template from Pinterest and developed the code. 
+For this website I pick a template from Pinterest and developed the code. 
