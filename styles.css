@@ -1,0 +1,1317 @@
+/**** proWork ****/
+/* Colors */
+/** Global Styles **/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto; }
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.clear {
+  clear: both; }
+
+.hmb-nav {
+  display: none; }
+
+/* Hero */
+#home-hero {
+  background: url("images/home_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+/* Buttons */
+.btn {
+  padding: 1em 2em;
+  outline: none;
+  cursor: pointer; }
+
+.btn-book {
+  width: auto;
+  color: #d67200;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: white;
+  border: none; }
+
+/*** Media Queries ***/
+/** max-width: 414px; **/
+@media only screen and (max-width: 414px) {
+  .btn {
+    padding: 1em 1.5em; }
+  #home-hero {
+    height: 550px; }
+  /* Header */
+  header {
+    padding-top: 20px;
+    height: 80px; }
+    header .navbar .nav-logo {
+      width: 200px; }
+      header .navbar .nav-logo p {
+        font-size: 16pt;
+        color: white;
+        font-weight: bold; }
+    header .full-nav {
+      display: none; }
+    header #hmb-nav-icon {
+      margin-top: -25px; }
+      header #hmb-nav-icon .bars {
+        width: 35px;
+        height: 15px;
+        float: right; }
+        header #hmb-nav-icon .bars .bar {
+          position: absolute;
+          height: 5px;
+          background: white;
+          -webkit-transition: all cubic-bezier(0.25, 0.1, 0.2, 1.54) 0.26s;
+          transition: all cubic-bezier(0.25, 0.1, 0.2, 1.54) 0.26s;
+          cursor: pointer; }
+        header #hmb-nav-icon .bars .bar1 {
+          margin-top: 0px;
+          width: 35px; }
+        header #hmb-nav-icon .bars .bar2 {
+          margin-top: 10px;
+          width: 40px; }
+        header #hmb-nav-icon .bars .bar3 {
+          margin-top: 20px;
+          width: 35px; }
+        header #hmb-nav-icon .bars .bars.close .bar1 {
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg);
+          top: 2.75rem; }
+        header #hmb-nav-icon .bars .bars.close .bar2 {
+          -webkit-transform: rotate(-45deg);
+                  transform: rotate(-45deg);
+          top: 2.75rem; }
+        header #hmb-nav-icon .bars .bars.close .bar3 {
+          display: none; }
+        header #hmb-nav-icon .bars .bars .bar:hover {
+          width: 35px; }
+    header .hmb-nav.close {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #d67200;
+      padding-top: 1em;
+      text-align: center;
+      font-size: 16pt;
+      text-transform: uppercase;
+      position: fixed;
+      right: 0;
+      z-index: 1;
+      margin-top: 1em; }
+      header .hmb-nav.close a {
+        color: white; }
+    header .hmb-nav li {
+      padding: 1em;
+      list-style: none; }
+    header .hmb-nav li:hover {
+      background-color: white;
+      width: 100%; }
+  /* Hero Content */
+  .hero-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "image" "slogan";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr; }
+    .hero-content .hero-slogan {
+      grid-area: slogan;
+      text-align: center; }
+      .hero-content .hero-slogan h1 {
+        font-size: 20pt;
+        color: white; }
+        .hero-content .hero-slogan h1 .orange {
+          color: #d67200;
+          text-shadow: 1px 1px 1px white; }
+      .hero-content .hero-slogan h4 {
+        margin-top: 10px;
+        font-size: 16pt;
+        color: white;
+        font-weight: 100; }
+      .hero-content .hero-slogan button {
+        margin-top: 20px; }
+    .hero-content .hero-img {
+      grid-area: image; }
+      .hero-content .hero-img img {
+        width: 100%; }
+  /* About */
+  #about .about-content {
+    padding-top: 50px;
+    height: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "logo" "bio";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    text-align: center; }
+    #about .about-content .logo {
+      grid-area: logo; }
+      #about .about-content .logo img {
+        width: 80%; }
+    #about .about-content .bio {
+      grid-area: bio;
+      margin-top: 20px; }
+      #about .about-content .bio p {
+        margin-top: 10px;
+        text-align: justify;
+        font-size: 11pt; }
+      #about .about-content .bio button {
+        margin-top: 20px;
+        color: #d67200;
+        font-size: 12pt;
+        border: 1px solid #d67200;
+        padding: 0.5em;
+        background: transparent; }
+        #about .about-content .bio button i {
+          margin-top: -10px; }
+  /* Spaces */
+  #spaces .spaces-container {
+    padding-top: 20%;
+    background: url("images/spaces_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 520px; }
+    #spaces .spaces-container .spaces-content {
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 40px; }
+      #spaces .spaces-container .spaces-content h2 {
+        color: #d67200; }
+      #spaces .spaces-container .spaces-content p {
+        color: white;
+        margin-top: 10px;
+        text-align: justify;
+        font-size: 11pt; }
+  /* Coworking */
+  #coworking {
+    background-color: #edf2f5; }
+    #coworking .stats .col-4-stats {
+      padding-top: 20px;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-areas: "stats1 stats2" "stats3 stats4";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr; }
+      #coworking .stats .col-4-stats .stats-1 {
+        grid-area: stats1; }
+      #coworking .stats .col-4-stats .stats-2 {
+        grid-area: stats2; }
+      #coworking .stats .col-4-stats .stats-3 {
+        grid-area: stats3; }
+      #coworking .stats .col-4-stats .stats-4 {
+        grid-area: stats4; }
+      #coworking .stats .col-4-stats .stats-1, #coworking .stats .col-4-stats .stats-2, #coworking .stats .col-4-stats .stats-3, #coworking .stats .col-4-stats .stats-4 {
+        background-color: white;
+        padding: 30px; }
+        #coworking .stats .col-4-stats .stats-1 img, #coworking .stats .col-4-stats .stats-2 img, #coworking .stats .col-4-stats .stats-3 img, #coworking .stats .col-4-stats .stats-4 img {
+          height: 50px; }
+        #coworking .stats .col-4-stats .stats-1 h3, #coworking .stats .col-4-stats .stats-2 h3, #coworking .stats .col-4-stats .stats-3 h3, #coworking .stats .col-4-stats .stats-4 h3 {
+          margin-top: 10px; }
+        #coworking .stats .col-4-stats .stats-1 p, #coworking .stats .col-4-stats .stats-2 p, #coworking .stats .col-4-stats .stats-3 p, #coworking .stats .col-4-stats .stats-4 p {
+          font-size: 10pt;
+          font-weight: 100; }
+        #coworking .stats .col-4-stats .stats-1 hr, #coworking .stats .col-4-stats .stats-2 hr, #coworking .stats .col-4-stats .stats-3 hr, #coworking .stats .col-4-stats .stats-4 hr {
+          margin-top: 10px; }
+        #coworking .stats .col-4-stats .stats-1 .purple, #coworking .stats .col-4-stats .stats-2 .purple, #coworking .stats .col-4-stats .stats-3 .purple, #coworking .stats .col-4-stats .stats-4 .purple {
+          color: #8a00d3;
+          background-color: #8a00d3;
+          height: 5px;
+          width: 25px;
+          border: none; }
+        #coworking .stats .col-4-stats .stats-1 .yellow, #coworking .stats .col-4-stats .stats-2 .yellow, #coworking .stats .col-4-stats .stats-3 .yellow, #coworking .stats .col-4-stats .stats-4 .yellow {
+          color: #e5a300;
+          background-color: #e5a300;
+          height: 5px;
+          width: 25px;
+          border: none; }
+        #coworking .stats .col-4-stats .stats-1 .blue, #coworking .stats .col-4-stats .stats-2 .blue, #coworking .stats .col-4-stats .stats-3 .blue, #coworking .stats .col-4-stats .stats-4 .blue {
+          color: #0087e2;
+          background-color: #0087e2;
+          height: 5px;
+          width: 25px;
+          border: none; }
+        #coworking .stats .col-4-stats .stats-1 .red, #coworking .stats .col-4-stats .stats-2 .red, #coworking .stats .col-4-stats .stats-3 .red, #coworking .stats .col-4-stats .stats-4 .red {
+          color: #ea6060;
+          background-color: #ea6060;
+          height: 5px;
+          width: 25px;
+          border: none; }
+    #coworking .coworking-content {
+      margin-top: 50px;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-areas: "title" "info";
+      grid-template-columns: 1fr;
+      grid-template-rows: 150px 1fr; }
+      #coworking .coworking-content .coworking-title {
+        grid-area: title; }
+        #coworking .coworking-content .coworking-title h2 {
+          font-size: 24pt;
+          font-weight: bold;
+          text-align: center; }
+          #coworking .coworking-content .coworking-title h2 .fa-heart {
+            color: red;
+            font-size: 11pt; }
+        #coworking .coworking-content .coworking-title h4 {
+          font-size: 12pt;
+          color: #8a00d3;
+          font-weight: 100;
+          text-align: center;
+          margin-top: 10px; }
+      #coworking .coworking-content .coworking-info {
+        margin-top: 10px;
+        grid-area: info;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "img"  "info";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr; }
+        #coworking .coworking-content .coworking-info .info1, #coworking .coworking-content .coworking-info .info2, #coworking .coworking-content .coworking-info .info3, #coworking .coworking-content .coworking-info .info4, #coworking .coworking-content .coworking-info .info5, #coworking .coworking-content .coworking-info .info6 {
+          margin-top: 10px; }
+          #coworking .coworking-content .coworking-info .info1 .info-img, #coworking .coworking-content .coworking-info .info2 .info-img, #coworking .coworking-content .coworking-info .info3 .info-img, #coworking .coworking-content .coworking-info .info4 .info-img, #coworking .coworking-content .coworking-info .info5 .info-img, #coworking .coworking-content .coworking-info .info6 .info-img {
+            text-align: center; }
+            #coworking .coworking-content .coworking-info .info1 .info-img img, #coworking .coworking-content .coworking-info .info2 .info-img img, #coworking .coworking-content .coworking-info .info3 .info-img img, #coworking .coworking-content .coworking-info .info4 .info-img img, #coworking .coworking-content .coworking-info .info5 .info-img img, #coworking .coworking-content .coworking-info .info6 .info-img img {
+              height: 50px; }
+          #coworking .coworking-content .coworking-info .info1 .info-text, #coworking .coworking-content .coworking-info .info2 .info-text, #coworking .coworking-content .coworking-info .info3 .info-text, #coworking .coworking-content .coworking-info .info4 .info-text, #coworking .coworking-content .coworking-info .info5 .info-text, #coworking .coworking-content .coworking-info .info6 .info-text {
+            text-align: center; }
+            #coworking .coworking-content .coworking-info .info1 .info-text h5, #coworking .coworking-content .coworking-info .info2 .info-text h5, #coworking .coworking-content .coworking-info .info3 .info-text h5, #coworking .coworking-content .coworking-info .info4 .info-text h5, #coworking .coworking-content .coworking-info .info5 .info-text h5, #coworking .coworking-content .coworking-info .info6 .info-text h5 {
+              font-weight: bold;
+              margin-top: 10px; }
+            #coworking .coworking-content .coworking-info .info1 .info-text p, #coworking .coworking-content .coworking-info .info2 .info-text p, #coworking .coworking-content .coworking-info .info3 .info-text p, #coworking .coworking-content .coworking-info .info4 .info-text p, #coworking .coworking-content .coworking-info .info5 .info-text p, #coworking .coworking-content .coworking-info .info6 .info-text p {
+              margin-top: 5px;
+              font-weight: 100;
+              font-size: 9pt; }
+  /* Team */
+  #team .team-content {
+    padding-top: 50px; }
+    #team .team-content .team-title {
+      text-align: center; }
+      #team .team-content .team-title h2 {
+        color: #d67200; }
+      #team .team-content .team-title p {
+        font-weight: 100;
+        margin-top: 10px;
+        line-height: 18pt; }
+    #team .team-content .team-members {
+      margin-top: 35px;
+      text-align: center; }
+      #team .team-content .team-members .member1, #team .team-content .team-members .member2 {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "photo"  "member-bio";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 100px; }
+        #team .team-content .team-members .member1 .member-img, #team .team-content .team-members .member2 .member-img {
+          grid-area: photo;
+          z-index: 1000; }
+          #team .team-content .team-members .member1 .member-img img, #team .team-content .team-members .member2 .member-img img {
+            height: 250px; }
+        #team .team-content .team-members .member1 .member-bio-container, #team .team-content .team-members .member2 .member-bio-container {
+          grid-area: photo;
+          background-color: #d67200;
+          height: 260px;
+          margin-top: 70px; }
+          #team .team-content .team-members .member1 .member-bio-container .member-bio, #team .team-content .team-members .member2 .member-bio-container .member-bio {
+            padding-top: 190px;
+            color: white; }
+            #team .team-content .team-members .member1 .member-bio-container .member-bio h6, #team .team-content .team-members .member2 .member-bio-container .member-bio h6 {
+              font-weight: 100;
+              margin-top: 5px; }
+      #team .team-content .team-members .member2 {
+        margin-top: -50px; }
+  /* Footer */
+  footer {
+    border-top: 1px solid #edf2f5; }
+    footer .footer-container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 20px;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: "social stores"  "copyright stores";
+      grid-template-columns: 1.75fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      justify-items: center; }
+      footer .footer-container .social {
+        grid-area: social; }
+        footer .footer-container .social img {
+          height: 40px;
+          margin-right: 5px; }
+      footer .footer-container .store {
+        grid-area: stores;
+        float: right; }
+        footer .footer-container .store img {
+          width: 100px;
+          margin-bottom: 5px; }
+      footer .footer-container .copyright {
+        grid-area: copyright; }
+        footer .footer-container .copyright p {
+          font-size: 10pt;
+          font-weight: 100; }
+          footer .footer-container .copyright p .orange {
+            color: #d67200; } }
+
+/** min-width: 415px & max-width: 900px **/
+@media only screen and (min-width: 415px) and (max-width: 900px) {
+  #home-hero {
+    height: 750px; }
+  /* Header */
+  header {
+    padding-top: 20px;
+    height: 80px; }
+    header .navbar .nav-logo {
+      width: 200px; }
+      header .navbar .nav-logo p {
+        font-size: 16pt;
+        color: white;
+        font-weight: bold; }
+    header .full-nav {
+      display: none; }
+    header #hmb-nav-icon {
+      margin-top: -25px; }
+      header #hmb-nav-icon .bars {
+        width: 35px;
+        height: 15px;
+        float: right; }
+        header #hmb-nav-icon .bars .bar {
+          position: absolute;
+          height: 5px;
+          background: white; }
+        header #hmb-nav-icon .bars .bar1 {
+          margin-top: 0px;
+          width: 35px; }
+        header #hmb-nav-icon .bars .bar2 {
+          margin-top: 10px;
+          width: 40px; }
+        header #hmb-nav-icon .bars .bar3 {
+          margin-top: 20px;
+          width: 35px; }
+        header #hmb-nav-icon .bars .bars.close .bar1 {
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg);
+          top: 2.75rem; }
+        header #hmb-nav-icon .bars .bars.close .bar2 {
+          -webkit-transform: rotate(-45deg);
+                  transform: rotate(-45deg);
+          top: 2.75rem; }
+        header #hmb-nav-icon .bars .bars.close .bar3 {
+          display: none; }
+        header #hmb-nav-icon .bars .bars .bar:hover {
+          width: 35px; }
+      header #hmb-nav-icon .hmb-nav.close {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #d67200;
+        padding-top: 1em;
+        text-align: center;
+        font-size: 16pt;
+        text-transform: uppercase;
+        position: fixed;
+        right: 0;
+        z-index: 1;
+        margin-top: 1em; }
+        header #hmb-nav-icon .hmb-nav.close a {
+          color: white; }
+      header #hmb-nav-icon .hmb-nav li {
+        padding: 1em;
+        list-style: none; }
+      header #hmb-nav-icon .hmb-nav li:hover {
+        background-color: white;
+        width: 100%; }
+  /* Hero Content */
+  .hero-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "image" "slogan";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr; }
+    .hero-content .hero-slogan {
+      grid-area: slogan;
+      text-align: center; }
+      .hero-content .hero-slogan h1 {
+        font-size: 24pt;
+        color: white; }
+        .hero-content .hero-slogan h1 .orange {
+          color: #d67200;
+          text-shadow: 1px 1px 1px white; }
+      .hero-content .hero-slogan h4 {
+        margin-top: 10px;
+        font-size: 18pt;
+        color: white;
+        font-weight: 100; }
+      .hero-content .hero-slogan button {
+        margin-top: 30px; }
+    .hero-content .hero-img {
+      grid-area: image; }
+      .hero-content .hero-img img {
+        width: 90%; }
+  /* About */
+  #about .about-content {
+    padding-top: 50px;
+    height: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "logo" "bio";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    text-align: center; }
+    #about .about-content .logo {
+      grid-area: logo; }
+      #about .about-content .logo img {
+        width: 50%; }
+    #about .about-content .bio {
+      grid-area: bio;
+      margin-top: 20px; }
+      #about .about-content .bio p {
+        margin-top: 20px;
+        text-align: justify;
+        font-size: 12pt;
+        line-height: 18pt; }
+      #about .about-content .bio button {
+        margin-top: 30px;
+        color: #d67200;
+        font-size: 12pt;
+        border: 1px solid #d67200;
+        padding: 1em;
+        background: transparent; }
+        #about .about-content .bio button i {
+          margin-top: -10px; }
+  /* Spaces */
+  #spaces .spaces-container {
+    padding-top: 20%;
+    background: url("images/spaces_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 520px; }
+    #spaces .spaces-container .spaces-content {
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 40px; }
+      #spaces .spaces-container .spaces-content h2 {
+        color: #d67200; }
+      #spaces .spaces-container .spaces-content p {
+        color: white;
+        margin-top: 10px;
+        text-align: justify;
+        font-size: 11pt; }
+  /* Coworking */
+  #coworking {
+    background-color: #edf2f5; }
+    #coworking .stats .col-4-stats {
+      padding-top: 20px;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-areas: "stats1 stats2" "stats3 stats4";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr; }
+      #coworking .stats .col-4-stats .stats-1 {
+        grid-area: stats1; }
+      #coworking .stats .col-4-stats .stats-2 {
+        grid-area: stats2; }
+      #coworking .stats .col-4-stats .stats-3 {
+        grid-area: stats3; }
+      #coworking .stats .col-4-stats .stats-4 {
+        grid-area: stats4; }
+      #coworking .stats .col-4-stats .stats-1, #coworking .stats .col-4-stats .stats-2, #coworking .stats .col-4-stats .stats-3, #coworking .stats .col-4-stats .stats-4 {
+        background-color: white;
+        padding: 30px; }
+        #coworking .stats .col-4-stats .stats-1 img, #coworking .stats .col-4-stats .stats-2 img, #coworking .stats .col-4-stats .stats-3 img, #coworking .stats .col-4-stats .stats-4 img {
+          height: 50px; }
+        #coworking .stats .col-4-stats .stats-1 h3, #coworking .stats .col-4-stats .stats-2 h3, #coworking .stats .col-4-stats .stats-3 h3, #coworking .stats .col-4-stats .stats-4 h3 {
+          margin-top: 10px; }
+        #coworking .stats .col-4-stats .stats-1 p, #coworking .stats .col-4-stats .stats-2 p, #coworking .stats .col-4-stats .stats-3 p, #coworking .stats .col-4-stats .stats-4 p {
+          font-size: 10pt;
+          font-weight: 100; }
+        #coworking .stats .col-4-stats .stats-1 hr, #coworking .stats .col-4-stats .stats-2 hr, #coworking .stats .col-4-stats .stats-3 hr, #coworking .stats .col-4-stats .stats-4 hr {
+          margin-top: 10px; }
+        #coworking .stats .col-4-stats .stats-1 .purple, #coworking .stats .col-4-stats .stats-2 .purple, #coworking .stats .col-4-stats .stats-3 .purple, #coworking .stats .col-4-stats .stats-4 .purple {
+          color: #8a00d3;
+          background-color: #8a00d3;
+          height: 5px;
+          width: 25px;
+          border: none; }
+        #coworking .stats .col-4-stats .stats-1 .yellow, #coworking .stats .col-4-stats .stats-2 .yellow, #coworking .stats .col-4-stats .stats-3 .yellow, #coworking .stats .col-4-stats .stats-4 .yellow {
+          color: #e5a300;
+          background-color: #e5a300;
+          height: 5px;
+          width: 25px;
+          border: none; }
+        #coworking .stats .col-4-stats .stats-1 .blue, #coworking .stats .col-4-stats .stats-2 .blue, #coworking .stats .col-4-stats .stats-3 .blue, #coworking .stats .col-4-stats .stats-4 .blue {
+          color: #0087e2;
+          background-color: #0087e2;
+          height: 5px;
+          width: 25px;
+          border: none; }
+        #coworking .stats .col-4-stats .stats-1 .red, #coworking .stats .col-4-stats .stats-2 .red, #coworking .stats .col-4-stats .stats-3 .red, #coworking .stats .col-4-stats .stats-4 .red {
+          color: #ea6060;
+          background-color: #ea6060;
+          height: 5px;
+          width: 25px;
+          border: none; }
+    #coworking .coworking-content {
+      margin-top: 50px;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-areas: "title" "info";
+      grid-template-columns: 1fr;
+      grid-template-rows: 150px 1fr; }
+      #coworking .coworking-content .coworking-title {
+        grid-area: title; }
+        #coworking .coworking-content .coworking-title h2 {
+          font-size: 24pt;
+          font-weight: bold;
+          text-align: center; }
+          #coworking .coworking-content .coworking-title h2 .fa-heart {
+            color: red;
+            font-size: 11pt; }
+        #coworking .coworking-content .coworking-title h4 {
+          font-size: 12pt;
+          color: #8a00d3;
+          font-weight: 100;
+          text-align: center;
+          margin-top: 10px; }
+      #coworking .coworking-content .coworking-info {
+        margin-top: 10px;
+        grid-area: info;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "img"  "info";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr; }
+        #coworking .coworking-content .coworking-info .info1, #coworking .coworking-content .coworking-info .info2, #coworking .coworking-content .coworking-info .info3, #coworking .coworking-content .coworking-info .info4, #coworking .coworking-content .coworking-info .info5, #coworking .coworking-content .coworking-info .info6 {
+          margin-top: 10px; }
+          #coworking .coworking-content .coworking-info .info1 .info-img, #coworking .coworking-content .coworking-info .info2 .info-img, #coworking .coworking-content .coworking-info .info3 .info-img, #coworking .coworking-content .coworking-info .info4 .info-img, #coworking .coworking-content .coworking-info .info5 .info-img, #coworking .coworking-content .coworking-info .info6 .info-img {
+            text-align: center; }
+            #coworking .coworking-content .coworking-info .info1 .info-img img, #coworking .coworking-content .coworking-info .info2 .info-img img, #coworking .coworking-content .coworking-info .info3 .info-img img, #coworking .coworking-content .coworking-info .info4 .info-img img, #coworking .coworking-content .coworking-info .info5 .info-img img, #coworking .coworking-content .coworking-info .info6 .info-img img {
+              height: 50px; }
+          #coworking .coworking-content .coworking-info .info1 .info-text, #coworking .coworking-content .coworking-info .info2 .info-text, #coworking .coworking-content .coworking-info .info3 .info-text, #coworking .coworking-content .coworking-info .info4 .info-text, #coworking .coworking-content .coworking-info .info5 .info-text, #coworking .coworking-content .coworking-info .info6 .info-text {
+            text-align: center; }
+            #coworking .coworking-content .coworking-info .info1 .info-text h5, #coworking .coworking-content .coworking-info .info2 .info-text h5, #coworking .coworking-content .coworking-info .info3 .info-text h5, #coworking .coworking-content .coworking-info .info4 .info-text h5, #coworking .coworking-content .coworking-info .info5 .info-text h5, #coworking .coworking-content .coworking-info .info6 .info-text h5 {
+              font-weight: bold;
+              margin-top: 10px; }
+            #coworking .coworking-content .coworking-info .info1 .info-text p, #coworking .coworking-content .coworking-info .info2 .info-text p, #coworking .coworking-content .coworking-info .info3 .info-text p, #coworking .coworking-content .coworking-info .info4 .info-text p, #coworking .coworking-content .coworking-info .info5 .info-text p, #coworking .coworking-content .coworking-info .info6 .info-text p {
+              margin-top: 5px;
+              font-weight: 100;
+              font-size: 9pt; }
+  /* Team */
+  #team .team-content {
+    padding-top: 50px; }
+    #team .team-content .team-title {
+      text-align: center; }
+      #team .team-content .team-title h2 {
+        color: #d67200; }
+      #team .team-content .team-title p {
+        font-weight: 100;
+        margin-top: 10px;
+        line-height: 18pt; }
+    #team .team-content .team-members {
+      margin-top: 35px;
+      text-align: left; }
+      #team .team-content .team-members .member1, #team .team-content .team-members .member2 {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "photo member-bio";
+        grid-template-columns: 400px 1fr;
+        grid-template-rows: 1fr 100px; }
+        #team .team-content .team-members .member1 .member-img, #team .team-content .team-members .member2 .member-img {
+          grid-area: photo;
+          z-index: 1000; }
+          #team .team-content .team-members .member1 .member-img img, #team .team-content .team-members .member2 .member-img img {
+            height: 250px; }
+        #team .team-content .team-members .member1 .member-bio-container, #team .team-content .team-members .member2 .member-bio-container {
+          grid-area: member-bio;
+          background-color: #d67200;
+          width: 500px;
+          height: 175px;
+          margin-top: 75px;
+          margin-left: 50px;
+          position: absolute; }
+          #team .team-content .team-members .member1 .member-bio-container .member-bio, #team .team-content .team-members .member2 .member-bio-container .member-bio {
+            float: right;
+            padding-right: 75px;
+            padding-top: 50px;
+            color: white; }
+            #team .team-content .team-members .member1 .member-bio-container .member-bio h3, #team .team-content .team-members .member2 .member-bio-container .member-bio h3 {
+              font-size: 16pt; }
+            #team .team-content .team-members .member1 .member-bio-container .member-bio h6, #team .team-content .team-members .member2 .member-bio-container .member-bio h6 {
+              font-weight: 100;
+              font-size: 12pt;
+              margin-top: 10px; }
+      #team .team-content .team-members .member2 {
+        margin-top: -50px; }
+  /* Footer */
+  footer {
+    border-top: 1px solid #edf2f5; }
+    footer .footer-container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 20px;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: "social copyright stores";
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      justify-items: center; }
+      footer .footer-container .social {
+        grid-area: social; }
+        footer .footer-container .social img {
+          height: 40px;
+          margin-right: 5px; }
+      footer .footer-container .store {
+        grid-area: stores;
+        float: right; }
+        footer .footer-container .store img {
+          width: 100px;
+          height: 30px;
+          margin-bottom: 5px; }
+      footer .footer-container .copyright {
+        grid-area: copyright;
+        padding-top: 10px; }
+        footer .footer-container .copyright p {
+          font-size: 10pt;
+          font-weight: 100; }
+          footer .footer-container .copyright p .orange {
+            color: #d67200; } }
+
+/** min-width: 901px  and max-width: 1280px **/
+@media only screen and (min-width: 901px) and (max-width: 1280px) {
+  /* Header */
+  header {
+    padding-top: 20px;
+    height: 80px; }
+    header .navbar .nav-logo {
+      width: 200px;
+      float: left; }
+      header .navbar .nav-logo p {
+        font-size: 16pt;
+        color: white;
+        font-weight: bold; }
+    header .navbar .full-nav {
+      float: right; }
+      header .navbar .full-nav .nav-items ul {
+        list-style: none; }
+        header .navbar .full-nav .nav-items ul li {
+          display: inline;
+          margin-right: 10px;
+          text-transform: uppercase;
+          font-size: 10pt; }
+  .hmb-nav {
+    display: none; }
+  /* Hero Content */
+  .hero-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "slogan image";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center; }
+    .hero-content .hero-slogan {
+      grid-area: slogan;
+      text-align: left; }
+      .hero-content .hero-slogan h1 {
+        font-size: 28pt;
+        color: white;
+        line-height: 35pt; }
+        .hero-content .hero-slogan h1 .orange {
+          color: #d67200;
+          text-shadow: 1px 1px 1px white; }
+      .hero-content .hero-slogan h4 {
+        margin-top: 25px;
+        font-size: 18pt;
+        color: white;
+        font-weight: 100; }
+      .hero-content .hero-slogan button {
+        margin-top: 30px; }
+    .hero-content .hero-img {
+      grid-area: image; }
+      .hero-content .hero-img img {
+        height: 400px; }
+  /* About */
+  #about .about-content {
+    padding-top: 50px;
+    height: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "logo bio";
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    text-align: left;
+    height: 500px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center; }
+    #about .about-content .logo {
+      grid-area: logo; }
+      #about .about-content .logo img {
+        width: 80%; }
+    #about .about-content .bio {
+      grid-area: bio; }
+      #about .about-content .bio p {
+        margin-top: 20px;
+        text-align: justify;
+        font-size: 12pt;
+        line-height: 18pt; }
+      #about .about-content .bio button {
+        margin-top: 30px;
+        color: #d67200;
+        font-size: 12pt;
+        border: 1px solid #d67200;
+        padding: 1em;
+        background: transparent; }
+        #about .about-content .bio button i {
+          margin-top: -10px; }
+  /* Spaces */
+  #spaces .spaces-container {
+    padding-top: 10%;
+    background: url("images/spaces_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 420px; }
+    #spaces .spaces-container .spaces-content {
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 40px; }
+      #spaces .spaces-container .spaces-content h2 {
+        color: #d67200; }
+      #spaces .spaces-container .spaces-content p {
+        color: white;
+        margin-top: 20px;
+        text-align: justify;
+        font-size: 12pt;
+        line-height: 16pt; }
+  /* Coworking */
+  #coworking {
+    background-color: #edf2f5; }
+    #coworking .stats .col-4-stats {
+      padding-top: 20px;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-areas: "stats1 stats2 stats3 stats4";
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr; }
+      #coworking .stats .col-4-stats .stats-1 {
+        grid-area: stats1; }
+      #coworking .stats .col-4-stats .stats-2 {
+        grid-area: stats2; }
+      #coworking .stats .col-4-stats .stats-3 {
+        grid-area: stats3; }
+      #coworking .stats .col-4-stats .stats-4 {
+        grid-area: stats4; }
+      #coworking .stats .col-4-stats .stats-1, #coworking .stats .col-4-stats .stats-2, #coworking .stats .col-4-stats .stats-3, #coworking .stats .col-4-stats .stats-4 {
+        background-color: white;
+        padding: 30px; }
+        #coworking .stats .col-4-stats .stats-1 img, #coworking .stats .col-4-stats .stats-2 img, #coworking .stats .col-4-stats .stats-3 img, #coworking .stats .col-4-stats .stats-4 img {
+          height: 50px; }
+        #coworking .stats .col-4-stats .stats-1 h3, #coworking .stats .col-4-stats .stats-2 h3, #coworking .stats .col-4-stats .stats-3 h3, #coworking .stats .col-4-stats .stats-4 h3 {
+          margin-top: 10px; }
+        #coworking .stats .col-4-stats .stats-1 p, #coworking .stats .col-4-stats .stats-2 p, #coworking .stats .col-4-stats .stats-3 p, #coworking .stats .col-4-stats .stats-4 p {
+          font-size: 10pt;
+          font-weight: 100; }
+        #coworking .stats .col-4-stats .stats-1 hr, #coworking .stats .col-4-stats .stats-2 hr, #coworking .stats .col-4-stats .stats-3 hr, #coworking .stats .col-4-stats .stats-4 hr {
+          margin-top: 10px; }
+        #coworking .stats .col-4-stats .stats-1 .purple, #coworking .stats .col-4-stats .stats-2 .purple, #coworking .stats .col-4-stats .stats-3 .purple, #coworking .stats .col-4-stats .stats-4 .purple {
+          color: #8a00d3;
+          background-color: #8a00d3;
+          height: 5px;
+          width: 25px;
+          border: none; }
+        #coworking .stats .col-4-stats .stats-1 .yellow, #coworking .stats .col-4-stats .stats-2 .yellow, #coworking .stats .col-4-stats .stats-3 .yellow, #coworking .stats .col-4-stats .stats-4 .yellow {
+          color: #e5a300;
+          background-color: #e5a300;
+          height: 5px;
+          width: 25px;
+          border: none; }
+        #coworking .stats .col-4-stats .stats-1 .blue, #coworking .stats .col-4-stats .stats-2 .blue, #coworking .stats .col-4-stats .stats-3 .blue, #coworking .stats .col-4-stats .stats-4 .blue {
+          color: #0087e2;
+          background-color: #0087e2;
+          height: 5px;
+          width: 25px;
+          border: none; }
+        #coworking .stats .col-4-stats .stats-1 .red, #coworking .stats .col-4-stats .stats-2 .red, #coworking .stats .col-4-stats .stats-3 .red, #coworking .stats .col-4-stats .stats-4 .red {
+          color: #ea6060;
+          background-color: #ea6060;
+          height: 5px;
+          width: 25px;
+          border: none; }
+    #coworking .coworking-content {
+      margin-top: 50px;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-areas: "title info";
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: 1fr;
+      padding-bottom: 70px; }
+      #coworking .coworking-content .coworking-title {
+        grid-area: title;
+        -ms-flex-item-align: center;
+            align-self: center;
+        justify-self: center; }
+        #coworking .coworking-content .coworking-title h2 {
+          font-size: 28pt;
+          font-weight: bold;
+          text-align: left; }
+          #coworking .coworking-content .coworking-title h2 .fa-heart {
+            color: red;
+            font-size: 12pt; }
+        #coworking .coworking-content .coworking-title h4 {
+          font-size: 16pt;
+          color: #8a00d3;
+          font-weight: 100;
+          text-align: left;
+          margin-top: 10px; }
+      #coworking .coworking-content .coworking-info {
+        margin-top: 10px;
+        grid-area: info;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "img"  "info";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr; }
+        #coworking .coworking-content .coworking-info .info1, #coworking .coworking-content .coworking-info .info2, #coworking .coworking-content .coworking-info .info3, #coworking .coworking-content .coworking-info .info4, #coworking .coworking-content .coworking-info .info5, #coworking .coworking-content .coworking-info .info6 {
+          margin-top: 10px; }
+          #coworking .coworking-content .coworking-info .info1 .info-img, #coworking .coworking-content .coworking-info .info2 .info-img, #coworking .coworking-content .coworking-info .info3 .info-img, #coworking .coworking-content .coworking-info .info4 .info-img, #coworking .coworking-content .coworking-info .info5 .info-img, #coworking .coworking-content .coworking-info .info6 .info-img {
+            text-align: center; }
+            #coworking .coworking-content .coworking-info .info1 .info-img img, #coworking .coworking-content .coworking-info .info2 .info-img img, #coworking .coworking-content .coworking-info .info3 .info-img img, #coworking .coworking-content .coworking-info .info4 .info-img img, #coworking .coworking-content .coworking-info .info5 .info-img img, #coworking .coworking-content .coworking-info .info6 .info-img img {
+              height: 50px; }
+          #coworking .coworking-content .coworking-info .info1 .info-text, #coworking .coworking-content .coworking-info .info2 .info-text, #coworking .coworking-content .coworking-info .info3 .info-text, #coworking .coworking-content .coworking-info .info4 .info-text, #coworking .coworking-content .coworking-info .info5 .info-text, #coworking .coworking-content .coworking-info .info6 .info-text {
+            text-align: center; }
+            #coworking .coworking-content .coworking-info .info1 .info-text h5, #coworking .coworking-content .coworking-info .info2 .info-text h5, #coworking .coworking-content .coworking-info .info3 .info-text h5, #coworking .coworking-content .coworking-info .info4 .info-text h5, #coworking .coworking-content .coworking-info .info5 .info-text h5, #coworking .coworking-content .coworking-info .info6 .info-text h5 {
+              font-weight: bold;
+              margin-top: 10px; }
+            #coworking .coworking-content .coworking-info .info1 .info-text p, #coworking .coworking-content .coworking-info .info2 .info-text p, #coworking .coworking-content .coworking-info .info3 .info-text p, #coworking .coworking-content .coworking-info .info4 .info-text p, #coworking .coworking-content .coworking-info .info5 .info-text p, #coworking .coworking-content .coworking-info .info6 .info-text p {
+              margin-top: 5px;
+              font-weight: 100;
+              font-size: 9pt; }
+  /* Team */
+  #team .team-content {
+    padding-top: 50px; }
+    #team .team-content .team-title {
+      text-align: center; }
+      #team .team-content .team-title h2 {
+        color: #d67200; }
+      #team .team-content .team-title p {
+        font-weight: 100;
+        margin-top: 10px;
+        line-height: 18pt; }
+    #team .team-content .team-members {
+      margin-top: 35px;
+      text-align: center;
+      display: grid;
+      grid-gap: 50px;
+      grid-template-areas: "member1 member2";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr; }
+      #team .team-content .team-members .member1, #team .team-content .team-members .member2 {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "photo name";
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: 1fr; }
+        #team .team-content .team-members .member1 .member-img, #team .team-content .team-members .member2 .member-img {
+          z-index: 1000;
+          margin-left: 20px; }
+          #team .team-content .team-members .member1 .member-img img, #team .team-content .team-members .member2 .member-img img {
+            height: 300px; }
+        #team .team-content .team-members .member1 .member-bio-container, #team .team-content .team-members .member2 .member-bio-container {
+          background-color: #d67200;
+          width: 400px;
+          height: 200px;
+          margin-top: 100px;
+          position: absolute; }
+          #team .team-content .team-members .member1 .member-bio-container .member-bio, #team .team-content .team-members .member2 .member-bio-container .member-bio {
+            float: right;
+            margin-right: 20px;
+            margin-top: 50px; }
+            #team .team-content .team-members .member1 .member-bio-container .member-bio h3, #team .team-content .team-members .member2 .member-bio-container .member-bio h3 {
+              color: white;
+              font-size: 20pt; }
+            #team .team-content .team-members .member1 .member-bio-container .member-bio h6, #team .team-content .team-members .member2 .member-bio-container .member-bio h6 {
+              color: white;
+              font-weight: 100;
+              margin-top: 10px; }
+      #team .team-content .team-members .member1 {
+        grid-area: member1; }
+      #team .team-content .team-members .member2 {
+        grid-area: member2; }
+  /* Footer */
+  footer {
+    margin-top: 50px;
+    border-top: 1px solid #edf2f5; }
+    footer .footer-container {
+      padding-top: 20px;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: "social copyright stores";
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      justify-items: center; }
+      footer .footer-container .social {
+        grid-area: social; }
+        footer .footer-container .social img {
+          height: 40px;
+          margin-right: 5px; }
+      footer .footer-container .store {
+        grid-area: stores;
+        float: right; }
+        footer .footer-container .store img {
+          width: 100px;
+          height: 30px;
+          margin-bottom: 5px; }
+      footer .footer-container .copyright {
+        grid-area: copyright;
+        padding-top: 10px; }
+        footer .footer-container .copyright p {
+          font-size: 10pt;
+          font-weight: 100; }
+          footer .footer-container .copyright p .orange {
+            color: #d67200; } }
+
+/** min-width: 1281px **/
+@media only screen and (min-width: 1281px) {
+  /* Header */
+  header {
+    padding-top: 20px;
+    height: 80px; }
+    header .navbar .nav-logo {
+      width: 200px;
+      float: left; }
+      header .navbar .nav-logo p {
+        font-size: 16pt;
+        color: white;
+        font-weight: bold; }
+    header .navbar .full-nav {
+      float: right; }
+      header .navbar .full-nav .nav-items ul {
+        list-style: none; }
+        header .navbar .full-nav .nav-items ul li {
+          display: inline;
+          margin-right: 10px;
+          text-transform: uppercase;
+          font-size: 10pt; }
+  .hmb-nav {
+    display: none; }
+  /* Hero Content */
+  .hero-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "slogan image";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center; }
+    .hero-content .hero-slogan {
+      grid-area: slogan;
+      text-align: left; }
+      .hero-content .hero-slogan h1 {
+        font-size: 28pt;
+        color: white;
+        line-height: 35pt; }
+        .hero-content .hero-slogan h1 .orange {
+          color: #d67200;
+          text-shadow: 1px 1px 1px white; }
+      .hero-content .hero-slogan h4 {
+        margin-top: 25px;
+        font-size: 18pt;
+        color: white;
+        font-weight: 100; }
+      .hero-content .hero-slogan button {
+        margin-top: 30px; }
+    .hero-content .hero-img {
+      grid-area: image; }
+      .hero-content .hero-img img {
+        height: 400px; }
+  /* About */
+  #about .about-content {
+    padding-top: 50px;
+    height: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "logo bio";
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    text-align: left;
+    height: 500px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center; }
+    #about .about-content .logo {
+      grid-area: logo; }
+      #about .about-content .logo img {
+        width: 80%; }
+    #about .about-content .bio {
+      grid-area: bio; }
+      #about .about-content .bio p {
+        margin-top: 20px;
+        text-align: justify;
+        font-size: 12pt;
+        line-height: 18pt; }
+      #about .about-content .bio button {
+        margin-top: 30px;
+        color: #d67200;
+        font-size: 12pt;
+        border: 1px solid #d67200;
+        padding: 1em;
+        background: transparent; }
+        #about .about-content .bio button i {
+          margin-top: -10px; }
+  /* Spaces */
+  #spaces .spaces-container {
+    padding: 5%;
+    background: url("images/spaces_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 420px; }
+    #spaces .spaces-container .spaces-content {
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 40px; }
+      #spaces .spaces-container .spaces-content h2 {
+        color: #d67200; }
+      #spaces .spaces-container .spaces-content p {
+        color: white;
+        margin-top: 20px;
+        text-align: justify;
+        font-size: 12pt;
+        line-height: 16pt; }
+  /* Coworking */
+  #coworking {
+    background-color: #edf2f5; }
+    #coworking .stats .col-4-stats {
+      padding-top: 20px;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-areas: "stats1 stats2 stats3 stats4";
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr; }
+      #coworking .stats .col-4-stats .stats-1 {
+        grid-area: stats1; }
+      #coworking .stats .col-4-stats .stats-2 {
+        grid-area: stats2; }
+      #coworking .stats .col-4-stats .stats-3 {
+        grid-area: stats3; }
+      #coworking .stats .col-4-stats .stats-4 {
+        grid-area: stats4; }
+      #coworking .stats .col-4-stats .stats-1, #coworking .stats .col-4-stats .stats-2, #coworking .stats .col-4-stats .stats-3, #coworking .stats .col-4-stats .stats-4 {
+        background-color: white;
+        padding: 30px; }
+        #coworking .stats .col-4-stats .stats-1 img, #coworking .stats .col-4-stats .stats-2 img, #coworking .stats .col-4-stats .stats-3 img, #coworking .stats .col-4-stats .stats-4 img {
+          height: 50px; }
+        #coworking .stats .col-4-stats .stats-1 h3, #coworking .stats .col-4-stats .stats-2 h3, #coworking .stats .col-4-stats .stats-3 h3, #coworking .stats .col-4-stats .stats-4 h3 {
+          margin-top: 10px; }
+        #coworking .stats .col-4-stats .stats-1 p, #coworking .stats .col-4-stats .stats-2 p, #coworking .stats .col-4-stats .stats-3 p, #coworking .stats .col-4-stats .stats-4 p {
+          font-size: 10pt;
+          font-weight: 100; }
+        #coworking .stats .col-4-stats .stats-1 hr, #coworking .stats .col-4-stats .stats-2 hr, #coworking .stats .col-4-stats .stats-3 hr, #coworking .stats .col-4-stats .stats-4 hr {
+          margin-top: 10px; }
+        #coworking .stats .col-4-stats .stats-1 .purple, #coworking .stats .col-4-stats .stats-2 .purple, #coworking .stats .col-4-stats .stats-3 .purple, #coworking .stats .col-4-stats .stats-4 .purple {
+          color: #8a00d3;
+          background-color: #8a00d3;
+          height: 5px;
+          width: 25px;
+          border: none; }
+        #coworking .stats .col-4-stats .stats-1 .yellow, #coworking .stats .col-4-stats .stats-2 .yellow, #coworking .stats .col-4-stats .stats-3 .yellow, #coworking .stats .col-4-stats .stats-4 .yellow {
+          color: #e5a300;
+          background-color: #e5a300;
+          height: 5px;
+          width: 25px;
+          border: none; }
+        #coworking .stats .col-4-stats .stats-1 .blue, #coworking .stats .col-4-stats .stats-2 .blue, #coworking .stats .col-4-stats .stats-3 .blue, #coworking .stats .col-4-stats .stats-4 .blue {
+          color: #0087e2;
+          background-color: #0087e2;
+          height: 5px;
+          width: 25px;
+          border: none; }
+        #coworking .stats .col-4-stats .stats-1 .red, #coworking .stats .col-4-stats .stats-2 .red, #coworking .stats .col-4-stats .stats-3 .red, #coworking .stats .col-4-stats .stats-4 .red {
+          color: #ea6060;
+          background-color: #ea6060;
+          height: 5px;
+          width: 25px;
+          border: none; }
+    #coworking .coworking-content {
+      margin-top: 50px;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-areas: "title info";
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: 1fr;
+      padding-bottom: 70px; }
+      #coworking .coworking-content .coworking-title {
+        grid-area: title;
+        -ms-flex-item-align: center;
+            align-self: center;
+        justify-self: center; }
+        #coworking .coworking-content .coworking-title h2 {
+          font-size: 28pt;
+          font-weight: bold;
+          text-align: left; }
+          #coworking .coworking-content .coworking-title h2 .fa-heart {
+            color: red;
+            font-size: 12pt; }
+        #coworking .coworking-content .coworking-title h4 {
+          font-size: 16pt;
+          color: #8a00d3;
+          font-weight: 100;
+          text-align: left;
+          margin-top: 10px; }
+      #coworking .coworking-content .coworking-info {
+        margin-top: 10px;
+        grid-area: info;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "img"  "info";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr; }
+        #coworking .coworking-content .coworking-info .info1, #coworking .coworking-content .coworking-info .info2, #coworking .coworking-content .coworking-info .info3, #coworking .coworking-content .coworking-info .info4, #coworking .coworking-content .coworking-info .info5, #coworking .coworking-content .coworking-info .info6 {
+          margin-top: 10px; }
+          #coworking .coworking-content .coworking-info .info1 .info-img, #coworking .coworking-content .coworking-info .info2 .info-img, #coworking .coworking-content .coworking-info .info3 .info-img, #coworking .coworking-content .coworking-info .info4 .info-img, #coworking .coworking-content .coworking-info .info5 .info-img, #coworking .coworking-content .coworking-info .info6 .info-img {
+            text-align: center; }
+            #coworking .coworking-content .coworking-info .info1 .info-img img, #coworking .coworking-content .coworking-info .info2 .info-img img, #coworking .coworking-content .coworking-info .info3 .info-img img, #coworking .coworking-content .coworking-info .info4 .info-img img, #coworking .coworking-content .coworking-info .info5 .info-img img, #coworking .coworking-content .coworking-info .info6 .info-img img {
+              height: 50px; }
+          #coworking .coworking-content .coworking-info .info1 .info-text, #coworking .coworking-content .coworking-info .info2 .info-text, #coworking .coworking-content .coworking-info .info3 .info-text, #coworking .coworking-content .coworking-info .info4 .info-text, #coworking .coworking-content .coworking-info .info5 .info-text, #coworking .coworking-content .coworking-info .info6 .info-text {
+            text-align: center; }
+            #coworking .coworking-content .coworking-info .info1 .info-text h5, #coworking .coworking-content .coworking-info .info2 .info-text h5, #coworking .coworking-content .coworking-info .info3 .info-text h5, #coworking .coworking-content .coworking-info .info4 .info-text h5, #coworking .coworking-content .coworking-info .info5 .info-text h5, #coworking .coworking-content .coworking-info .info6 .info-text h5 {
+              font-weight: bold;
+              margin-top: 10px; }
+            #coworking .coworking-content .coworking-info .info1 .info-text p, #coworking .coworking-content .coworking-info .info2 .info-text p, #coworking .coworking-content .coworking-info .info3 .info-text p, #coworking .coworking-content .coworking-info .info4 .info-text p, #coworking .coworking-content .coworking-info .info5 .info-text p, #coworking .coworking-content .coworking-info .info6 .info-text p {
+              margin-top: 5px;
+              font-weight: 100;
+              font-size: 9pt; }
+  /* Team */
+  #team .team-content {
+    padding-top: 50px; }
+    #team .team-content .team-title {
+      text-align: center; }
+      #team .team-content .team-title h2 {
+        color: #d67200; }
+      #team .team-content .team-title p {
+        font-weight: 100;
+        margin-top: 10px;
+        line-height: 18pt; }
+    #team .team-content .team-members {
+      margin-top: 35px;
+      text-align: center;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-areas: "member1 member2";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr; }
+      #team .team-content .team-members .member1, #team .team-content .team-members .member2 {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "photo member-bio";
+        grid-template-columns: 400px 1fr;
+        grid-template-rows: 1fr 100px; }
+        #team .team-content .team-members .member1 .member-img, #team .team-content .team-members .member2 .member-img {
+          grid-area: photo;
+          z-index: 1000; }
+          #team .team-content .team-members .member1 .member-img img, #team .team-content .team-members .member2 .member-img img {
+            height: 250px; }
+        #team .team-content .team-members .member1 .member-bio-container, #team .team-content .team-members .member2 .member-bio-container {
+          grid-area: member-bio;
+          background-color: #d67200;
+          width: 500px;
+          height: 175px;
+          margin-top: 75px;
+          margin-left: 50px;
+          position: absolute; }
+          #team .team-content .team-members .member1 .member-bio-container .member-bio, #team .team-content .team-members .member2 .member-bio-container .member-bio {
+            float: right;
+            padding-right: 75px;
+            padding-top: 50px;
+            color: white; }
+            #team .team-content .team-members .member1 .member-bio-container .member-bio h3, #team .team-content .team-members .member2 .member-bio-container .member-bio h3 {
+              font-size: 16pt; }
+            #team .team-content .team-members .member1 .member-bio-container .member-bio h6, #team .team-content .team-members .member2 .member-bio-container .member-bio h6 {
+              font-weight: 100;
+              font-size: 12pt;
+              margin-top: 10px; }
+      #team .team-content .team-members .member1 {
+        grid-area: member1; }
+      #team .team-content .team-members .member2 {
+        grid-area: member2; }
+  /* Footer */
+  footer {
+    border-top: 1px solid #edf2f5; }
+    footer .footer-container {
+      padding-top: 20px;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: "social copyright stores";
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      justify-items: center; }
+      footer .footer-container .social {
+        grid-area: social; }
+        footer .footer-container .social img {
+          height: 40px;
+          margin-right: 5px; }
+      footer .footer-container .store {
+        grid-area: stores;
+        float: right; }
+        footer .footer-container .store img {
+          width: 100px;
+          height: 30px;
+          margin-bottom: 5px; }
+      footer .footer-container .copyright {
+        grid-area: copyright;
+        padding-top: 10px; }
+        footer .footer-container .copyright p {
+          font-size: 10pt;
+          font-weight: 100; }
+          footer .footer-container .copyright p .orange {
+            color: #d67200; } }

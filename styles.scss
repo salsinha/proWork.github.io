@@ -1,0 +1,1752 @@
+/**** proWork ****/
+
+/* Colors */
+$light_grey: #edf2f5;
+$orange: #d67200;
+$purple: #8a00d3;
+$yellow: #e5a300;
+$blue: #0087e2;
+$red: #ea6060;
+
+/** Global Styles **/
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    padding: 0 auto;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.cf:before, .cf:after{
+    content: " ";
+    display: table;
+}
+
+.cf:after{
+    clear: both;
+}
+
+.clear{
+    clear: both;
+}
+
+.hmb-nav{
+    display: none;
+}
+/* Hero */
+#home-hero{
+    background: url("images/home_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Buttons */
+
+.btn{
+    padding: 1em 2em;
+    outline: none;
+    cursor: pointer;
+}
+.btn-book{
+    width: auto;
+    color: $orange;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: white;
+    border: none;
+}
+
+/*** Media Queries ***/
+
+/** max-width: 414px; **/
+@media only screen and (max-width:414px){
+
+    .btn{
+        padding: 1em 1.5em;
+    }
+
+    #home-hero{
+        height: 550px;
+    }
+
+    /* Header */
+    header{
+        padding-top: 20px;
+        height: 80px;
+        .navbar{
+            .nav-logo{
+                width: 200px;
+                & p{
+                    font-size: 16pt;
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+        }
+        .full-nav{
+            display: none;
+        }
+        #hmb-nav-icon{
+            margin-top: -25px;
+            .bars{
+                width: 35px;
+                height: 15px;
+                float: right;
+                .bar{
+                    position: absolute;
+                    height: 5px;
+                    background: white;
+                    transition: all cubic-bezier(0.25, 0.1, 0.20, 1.54) 0.26s;
+                    cursor: pointer;
+                }
+                .bar1{
+                    margin-top: 0px;
+                    width: 35px;
+                }
+            
+                .bar2{
+                    margin-top: 10px;
+                    width: 40px;
+                }
+                
+                .bar3{
+                    margin-top: 20px;
+                    width: 35px;
+                }		
+                    
+                .bars.close .bar1{
+                    transform: rotate(45deg);
+                    top: 2.75rem;
+                }
+                    
+                .bars.close .bar2{
+                    transform: rotate(-45deg);
+                    top: 2.75rem;
+                }
+                
+                .bars.close .bar3{
+                    display: none;
+                }	
+                
+                .bars .bar:hover{
+                    width: 35px;
+                }
+
+            }
+        }
+        .hmb-nav.close{
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: $orange;
+            padding-top: 1em;
+            text-align: center;
+            font-size: 16pt;
+            text-transform: uppercase;
+            position: fixed;
+            right: 0;
+            z-index: 1;
+            margin-top: 1em;
+            & a{
+                color: white;
+            }
+        }
+        .hmb-nav li{
+            padding: 1em;
+            list-style: none;
+        }
+        .hmb-nav li:hover{
+            background-color: white;
+            width: 100%;
+        }	
+    }
+
+    /* Hero Content */
+    .hero-content{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "image"
+                            "slogan"; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr;
+        .hero-slogan{
+            grid-area: slogan;
+            text-align: center;
+            & h1{
+                font-size: 20pt;
+                color: white;
+                .orange{
+                    color: $orange;
+                    text-shadow: 1px 1px 1px white;
+                }
+            }
+            & h4{
+                margin-top: 10px;
+                font-size: 16pt;
+                color: white;
+                font-weight: 100;
+            }
+            button{
+                margin-top: 20px;
+            }
+        }
+        .hero-img{
+            grid-area: image;
+            & img{
+                width: 100%;
+            }
+        }
+    }
+
+    /* About */
+    #about{
+        .about-content{
+            padding-top: 50px;
+            height: auto;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-areas: "logo"
+                                "bio"; 
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.5fr 1fr;
+            text-align: center;
+            .logo{
+                grid-area: logo;
+                & img{
+                    width: 80%;
+                }
+            }
+            .bio{
+                grid-area: bio;
+                margin-top: 20px;
+                & p{
+                    margin-top: 10px;
+                    text-align: justify;
+                    font-size: 11pt;
+                }
+                & button{
+                    margin-top: 20px;
+                    color: $orange;
+                    font-size: 12pt;
+                    border: 1px solid $orange;
+                    padding: 0.5em;
+                    background: transparent; 
+                    & i{
+                        margin-top: -10px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Spaces */
+    #spaces{
+        .spaces-container{
+            padding-top: 20%; 
+            background: url("images/spaces_bg.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 520px;
+            .spaces-content{ 
+                background: rgba(0,0,0, 0.7);
+                text-align: center;
+                padding: 40px; 
+                & h2{
+                    color: $orange;
+                }
+                & p{
+                    color: white;
+                    margin-top: 10px;
+                    text-align: justify;
+                    font-size: 11pt;
+                }
+            }
+        }
+    }
+
+    /* Coworking */
+    #coworking{
+        background-color: $light_grey;
+        .stats{
+            .col-4-stats{
+                padding-top: 20px;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-areas: "stats1 stats2"
+                                    "stats3 stats4";
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                .stats-1{
+                    grid-area: stats1;
+                }
+                .stats-2{
+                    grid-area: stats2;
+                }
+                .stats-3{
+                    grid-area: stats3;
+                }
+                .stats-4{
+                    grid-area: stats4;
+                }
+                .stats-1, .stats-2, .stats-3, .stats-4{
+                    background-color: white;
+                    padding: 30px;
+                    & img{
+                        height: 50px;
+                    }
+                    & h3{
+                        margin-top: 10px;
+                    }
+                    & p{
+                        font-size: 10pt;
+                        font-weight: 100;
+                    }
+                    & hr{
+                        margin-top: 10px;
+                    }
+                    .purple{
+                        color: $purple;
+                        background-color: $purple;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                    .yellow{
+                        color: $yellow;
+                        background-color: $yellow;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                    .blue{
+                        color: $blue;
+                        background-color: $blue;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                    .red{
+                        color: $red;
+                        background-color: $red;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                }
+            }
+        }
+        .coworking-content{
+            margin-top: 50px;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-areas: "title"
+                                "info";
+            grid-template-columns: 1fr;
+            grid-template-rows: 150px 1fr;
+            .coworking-title{
+                grid-area: title;
+                & h2{
+                    font-size: 24pt;
+                    font-weight: bold;
+                    text-align: center;
+                    & .fa-heart{
+                        color: red;
+                        font-size: 11pt;
+                    }
+                }
+                & h4{
+                    font-size: 12pt;
+                    color: $purple;
+                    font-weight: 100;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+            }
+            .coworking-info{
+                margin-top: 10px;
+                grid-area: info;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-areas: "img" 
+                                    "info";
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                .info1, .info2, .info3, .info4, .info5, .info6{
+                    margin-top: 10px;
+                    .info-img{
+                        text-align: center;
+                        & img{
+                            height: 50px;
+                        }
+                    }
+                    .info-text{
+                        text-align: center;
+                        & h5{
+                            font-weight: bold;
+                            margin-top: 10px;
+                        }
+                        & p{
+                            margin-top: 5px;
+                            font-weight: 100;
+                            font-size: 9pt;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Team */
+    #team{
+        .team-content{
+            padding-top: 50px;
+            .team-title{
+                text-align: center;
+                & h2{
+                    color: $orange;
+                }
+                & p{
+                    font-weight: 100;
+                    margin-top: 10px;
+                    line-height: 18pt;
+                }
+            }
+            .team-members{
+                margin-top: 35px;
+                text-align: center;
+                .member1, .member2{
+                    display: grid;
+                    grid-gap: 20px;
+                    grid-template-areas: "photo" 
+                                        "member-bio";
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 100px;
+                    .member-img{
+                        grid-area: photo;
+                        z-index: 1000;
+                        & img{
+                            height: 250px;
+                        }
+                    }
+                    .member-bio-container{
+                        grid-area: photo;
+                        background-color: $orange;
+                        height: 260px;
+                        margin-top: 70px;
+                        .member-bio{
+                            padding-top: 190px;
+                            color: white;
+                            & h6{
+                                font-weight: 100;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                }
+                .member2{
+                     margin-top: -50px;
+                }
+            }
+        }
+    }
+
+    /* Footer */
+    footer{
+        border-top: 1px solid $light_grey;
+        .footer-container{
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 20px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas: "social stores" 
+                                "copyright stores";
+            grid-template-columns: 1.75fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+            .social{
+                grid-area: social;
+                & img{
+                    height: 40px;
+                    margin-right: 5px;
+                }
+            }
+            .store{
+                grid-area: stores;
+                float: right;
+                & img{
+                    width: 100px;
+                    margin-bottom: 5px;
+                }
+            }
+            .copyright{
+                grid-area: copyright;
+                & p{
+                    font-size: 10pt;
+                    font-weight: 100;
+                    & .orange{
+                        color: $orange;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+/** min-width: 415px & max-width: 900px **/
+@media only screen and (min-width: 415px) and (max-width: 900px){
+
+    #home-hero{
+        height: 750px;
+    }
+
+    /* Header */
+    header{
+        padding-top: 20px;
+        height: 80px;
+        .navbar{
+            .nav-logo{
+                width: 200px;
+                & p{
+                    font-size: 16pt;
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+        }
+        .full-nav{
+            display: none;
+        }
+        #hmb-nav-icon{
+            margin-top: -25px;
+            .bars{
+                width: 35px;
+                height: 15px;
+                float: right;
+                .bar{
+                    position: absolute;
+                    height: 5px;
+                    background: white;
+                }
+                .bar1{
+                    margin-top: 0px;
+                    width: 35px;
+                }
+            
+                .bar2{
+                    margin-top: 10px;
+                    width: 40px;
+                }
+                
+                .bar3{
+                    margin-top: 20px;
+                    width: 35px;
+                }		
+                    
+                .bars.close .bar1{
+                    transform: rotate(45deg);
+                    top: 2.75rem;
+                }
+                    
+                .bars.close .bar2{
+                    transform: rotate(-45deg);
+                    top: 2.75rem;
+                }
+                
+                .bars.close .bar3{
+                    display: none;
+                }	
+                
+                .bars .bar:hover{
+                    width: 35px;
+                }
+
+            }
+            .hmb-nav.close{
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: $orange;
+                padding-top: 1em;
+                text-align: center;
+                font-size: 16pt;
+                text-transform: uppercase;
+                position: fixed;
+                right: 0;
+                z-index: 1;
+                margin-top: 1em;
+                & a{
+                    color: white;
+                }
+            }
+            .hmb-nav li{
+                padding: 1em;
+                list-style: none;
+            }
+            .hmb-nav li:hover{
+                background-color: white;
+                width: 100%;
+            }	
+        }
+    }
+
+    /* Hero Content */
+    .hero-content{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "image"
+                            "slogan"; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr;
+        .hero-slogan{
+            grid-area: slogan;
+            text-align: center;
+            & h1{
+                font-size: 24pt;
+                color: white;
+                .orange{
+                    color: $orange;
+                    text-shadow: 1px 1px 1px white;
+                }
+            }
+            & h4{
+                margin-top: 10px;
+                font-size: 18pt;
+                color: white;
+                font-weight: 100;
+            }
+            button{
+                margin-top: 30px;
+            }
+        }
+        .hero-img{
+            grid-area: image;
+            & img{
+                width: 90%;
+            }
+        }
+    }
+
+    /* About */
+    #about{
+        .about-content{
+            padding-top: 50px;
+            height: auto;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-areas: "logo"
+                                "bio"; 
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.5fr 1fr;
+            text-align: center;
+            .logo{
+                grid-area: logo;
+                & img{
+                    width: 50%;
+                }
+            }
+            .bio{
+                grid-area: bio;
+                margin-top: 20px;
+                & p{
+                    margin-top: 20px;
+                    text-align: justify;
+                    font-size: 12pt;
+                    line-height: 18pt;
+                }
+                & button{
+                    margin-top: 30px;
+                    color: $orange;
+                    font-size: 12pt;
+                    border: 1px solid $orange;
+                    padding: 1em;
+                    background: transparent; 
+                    & i{
+                        margin-top: -10px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Spaces */
+    #spaces{
+        .spaces-container{
+            padding-top: 20%; 
+            background: url("images/spaces_bg.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 520px;
+            .spaces-content{ 
+                background: rgba(0,0,0, 0.7);
+                text-align: center;
+                padding: 40px; 
+                & h2{
+                    color: $orange;
+                }
+                & p{
+                    color: white;
+                    margin-top: 10px;
+                    text-align: justify;
+                    font-size: 11pt;
+                }
+            }
+        }
+    }
+
+    /* Coworking */
+    #coworking{
+        background-color: $light_grey;
+        .stats{
+            .col-4-stats{
+                padding-top: 20px;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-areas: "stats1 stats2"
+                                    "stats3 stats4";
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                .stats-1{
+                    grid-area: stats1;
+                }
+                .stats-2{
+                    grid-area: stats2;
+                }
+                .stats-3{
+                    grid-area: stats3;
+                }
+                .stats-4{
+                    grid-area: stats4;
+                }
+                .stats-1, .stats-2, .stats-3, .stats-4{
+                    background-color: white;
+                    padding: 30px;
+                    & img{
+                        height: 50px;
+                    }
+                    & h3{
+                        margin-top: 10px;
+                    }
+                    & p{
+                        font-size: 10pt;
+                        font-weight: 100;
+                    }
+                    & hr{
+                        margin-top: 10px;
+                    }
+                    .purple{
+                        color: $purple;
+                        background-color: $purple;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                    .yellow{
+                        color: $yellow;
+                        background-color: $yellow;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                    .blue{
+                        color: $blue;
+                        background-color: $blue;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                    .red{
+                        color: $red;
+                        background-color: $red;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                }
+            }
+        }
+        .coworking-content{
+            margin-top: 50px;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-areas: "title"
+                                "info";
+            grid-template-columns: 1fr;
+            grid-template-rows: 150px 1fr;
+            .coworking-title{
+                grid-area: title;
+                & h2{
+                    font-size: 24pt;
+                    font-weight: bold;
+                    text-align: center;
+                    & .fa-heart{
+                        color: red;
+                        font-size: 11pt;
+                    }
+                }
+                & h4{
+                    font-size: 12pt;
+                    color: $purple;
+                    font-weight: 100;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+            }
+            .coworking-info{
+                margin-top: 10px;
+                grid-area: info;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-areas: "img" 
+                                    "info";
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                .info1, .info2, .info3, .info4, .info5, .info6{
+                    margin-top: 10px;
+                    .info-img{
+                        text-align: center;
+                        & img{
+                            height: 50px;
+                        }
+                    }
+                    .info-text{
+                        text-align: center;
+                        & h5{
+                            font-weight: bold;
+                            margin-top: 10px;
+                        }
+                        & p{
+                            margin-top: 5px;
+                            font-weight: 100;
+                            font-size: 9pt;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Team */
+    #team{
+        .team-content{
+            padding-top: 50px;
+            .team-title{
+                text-align: center;
+                & h2{
+                    color: $orange;
+                }
+                & p{
+                    font-weight: 100;
+                    margin-top: 10px;
+                    line-height: 18pt;
+                }
+            }
+            .team-members{
+                margin-top: 35px;
+                text-align: left;
+                .member1, .member2{
+                    display: grid;
+                    grid-gap: 20px;
+                    grid-template-areas: "photo member-bio";
+                    grid-template-columns: 400px 1fr;
+                    grid-template-rows: 1fr 100px;
+                    .member-img{
+                        grid-area: photo;
+                        z-index: 1000;
+                        & img{
+                            height: 250px;
+                        }
+                    }
+                    .member-bio-container{
+                        grid-area: member-bio;
+                        background-color: $orange;
+                        width: 500px;
+                        height: 175px;
+                        margin-top: 75px;
+                        margin-left: 50px;
+                        position: absolute;
+                        .member-bio{
+                            float: right;
+                            padding-right: 75px;
+                            padding-top: 50px;
+                            color: white;
+                            & h3{
+                                font-size: 16pt;
+                            }
+                            & h6{
+                                font-weight: 100;
+                                font-size: 12pt;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+                .member2{
+                     margin-top: -50px;
+                }
+            }
+        }
+    }
+
+    /* Footer */
+    footer{
+        border-top: 1px solid $light_grey;
+        .footer-container{
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 20px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas: "social copyright stores"; 
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+            .social{
+                grid-area: social;
+                & img{
+                    height: 40px;
+                    margin-right: 5px;
+                }
+            }
+            .store{
+                grid-area: stores;
+                float: right;
+                & img{
+                    width: 100px;
+                    height: 30px;
+                    margin-bottom: 5px;
+                }
+            }
+            .copyright{
+                grid-area: copyright;
+                padding-top: 10px;
+                & p{
+                    font-size: 10pt;
+                    font-weight: 100;
+                    & .orange{
+                        color: $orange;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+/** min-width: 901px  and max-width: 1280px **/
+@media only screen and (min-width: 901px) and (max-width: 1280px){
+    /* Header */
+    header{
+        padding-top: 20px;
+        height: 80px;
+        .navbar{
+            .nav-logo{
+                width: 200px;
+                float: left;
+                & p{
+                    font-size: 16pt;
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+            .full-nav{
+                float: right;
+                .nav-items{
+                    & ul{
+                        list-style: none;
+                        & li{
+                            display: inline;
+                            margin-right: 10px;
+                            text-transform: uppercase;
+                            font-size: 10pt;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .hmb-nav{
+        display: none;
+    }
+
+    /* Hero Content */
+    .hero-content{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "slogan image"; 
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: center;
+        .hero-slogan{
+            grid-area: slogan;
+            text-align: left;
+            & h1{
+                font-size: 28pt;
+                color: white;
+                line-height: 35pt;
+                .orange{
+                    color: $orange;
+                    text-shadow: 1px 1px 1px white;
+                }
+            }
+            & h4{
+                margin-top: 25px;
+                font-size: 18pt;
+                color: white;
+                font-weight: 100;
+            }
+            button{
+                margin-top: 30px;
+            }
+        }
+        .hero-img{
+            grid-area: image;
+            & img{
+                height: 400px;
+            }
+        }
+    }
+
+    /* About */
+    #about{
+        .about-content{
+            padding-top: 50px;
+            height: auto;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-areas: "logo bio"; 
+            grid-template-columns: 0.5fr 1fr;
+            grid-template-rows: 1fr;
+            text-align: left;
+            height: 500px;
+            align-items: center;
+            justify-items: center;
+            .logo{
+                grid-area: logo;
+                & img{
+                    width: 80%;
+                }
+            }
+            .bio{
+                grid-area: bio;
+                & p{
+                    margin-top: 20px;
+                    text-align: justify;
+                    font-size: 12pt;
+                    line-height: 18pt;
+                }
+                & button{
+                    margin-top: 30px;
+                    color: $orange;
+                    font-size: 12pt;
+                    border: 1px solid $orange;
+                    padding: 1em;
+                    background: transparent; 
+                    & i{
+                        margin-top: -10px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Spaces */
+    #spaces{
+        .spaces-container{
+            padding-top: 10%; 
+            background: url("images/spaces_bg.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 420px;
+            .spaces-content{ 
+                background: rgba(0,0,0, 0.7);
+                text-align: center;
+                padding: 40px; 
+                & h2{
+                    color: $orange;
+                }
+                & p{
+                    color: white;
+                    margin-top: 20px;
+                    text-align: justify;
+                    font-size: 12pt;
+                    line-height: 16pt;
+                }
+            }
+        }
+    }
+
+    /* Coworking */
+    #coworking{
+        background-color: $light_grey;
+        .stats{
+            .col-4-stats{
+                padding-top: 20px;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-areas: "stats1 stats2 stats3 stats4";
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                .stats-1{
+                    grid-area: stats1;
+                }
+                .stats-2{
+                    grid-area: stats2;
+                }
+                .stats-3{
+                    grid-area: stats3;
+                }
+                .stats-4{
+                    grid-area: stats4;
+                }
+                .stats-1, .stats-2, .stats-3, .stats-4{
+                    background-color: white;
+                    padding: 30px;
+                    & img{
+                        height: 50px;
+                    }
+                    & h3{
+                        margin-top: 10px;
+                    }
+                    & p{
+                        font-size: 10pt;
+                        font-weight: 100;
+                    }
+                    & hr{
+                        margin-top: 10px;
+                    }
+                    .purple{
+                        color: $purple;
+                        background-color: $purple;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                    .yellow{
+                        color: $yellow;
+                        background-color: $yellow;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                    .blue{
+                        color: $blue;
+                        background-color: $blue;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                    .red{
+                        color: $red;
+                        background-color: $red;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                }
+            }
+        }
+        .coworking-content{
+            margin-top: 50px;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-areas: "title info";
+            grid-template-columns: 300px 1fr;
+            grid-template-rows: 1fr;
+            padding-bottom: 70px;
+            .coworking-title{
+                grid-area: title;
+                align-self: center;
+                justify-self: center;
+                & h2{
+                    font-size: 28pt;
+                    font-weight: bold;
+                    text-align: left;
+                    & .fa-heart{
+                        color: red;
+                        font-size: 12pt;
+                    }
+                }
+                & h4{
+                    font-size: 16pt;
+                    color: $purple;
+                    font-weight: 100;
+                    text-align: left;
+                    margin-top: 10px;
+                }
+            }
+            .coworking-info{
+                margin-top: 10px;
+                grid-area: info;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-areas: "img" 
+                                    "info";
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                .info1, .info2, .info3, .info4, .info5, .info6{
+                    margin-top: 10px;
+                    .info-img{
+                        text-align: center;
+                        & img{
+                            height: 50px;
+                        }
+                    }
+                    .info-text{
+                        text-align: center;
+                        & h5{
+                            font-weight: bold;
+                            margin-top: 10px;
+                        }
+                        & p{
+                            margin-top: 5px;
+                            font-weight: 100;
+                            font-size: 9pt;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Team */
+    #team{
+        .team-content{
+            padding-top: 50px;
+            .team-title{
+                text-align: center;
+                & h2{
+                    color: $orange;
+                }
+                & p{
+                    font-weight: 100;
+                    margin-top: 10px;
+                    line-height: 18pt;
+                }
+            }
+            .team-members{
+                margin-top: 35px;
+                text-align: center;
+                display: grid;
+                grid-gap: 50px;
+                grid-template-areas: "member1 member2";
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                .member1, .member2{
+                    display: grid;
+                    grid-gap: 20px;
+                    grid-template-areas: "photo name";
+                    grid-template-columns: 0.5fr 1fr;
+                    grid-template-rows: 1fr;
+                    .member-img{
+                        z-index: 1000;
+                        margin-left: 20px;
+                        & img{
+                            height: 300px;
+                        }
+                    }
+                    .member-bio-container{
+                        background-color: $orange;
+                        width: 400px;
+                        height: 200px;
+                        margin-top: 100px;
+                        position: absolute;
+                        .member-bio{
+                            float: right;
+                            margin-right: 20px;
+                            margin-top: 50px;
+                            & h3{
+                                color: white;
+                                font-size: 20pt;
+                            }
+                            & h6{
+                                color: white;
+                                font-weight: 100;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                    
+
+                }
+                .member1{
+                    grid-area: member1;
+                }
+                .member2{
+                    grid-area: member2;
+                }
+            }
+        }
+    }
+
+    /* Footer */
+    footer{
+        margin-top: 50px;
+        border-top: 1px solid $light_grey;
+        .footer-container{
+            padding-top: 20px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas: "social copyright stores"; 
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            align-items: center;
+            justify-items: center;
+            .social{
+                grid-area: social;
+                & img{
+                    height: 40px;
+                    margin-right: 5px;
+                }
+            }
+            .store{
+                grid-area: stores;
+                float: right;
+                & img{
+                    width: 100px;
+                    height: 30px;
+                    margin-bottom: 5px;
+                }
+            }
+            .copyright{
+                grid-area: copyright;
+                padding-top: 10px;
+                & p{
+                    font-size: 10pt;
+                    font-weight: 100;
+                    & .orange{
+                        color: $orange;
+                    }
+                }
+                    
+            }
+        }
+    }
+}
+
+/** min-width: 1281px **/
+@media only screen and (min-width: 1281px){
+    /* Header */
+    header{
+        padding-top: 20px;
+        height: 80px;
+        .navbar{
+            .nav-logo{
+                width: 200px;
+                float: left;
+                & p{
+                    font-size: 16pt;
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+            .full-nav{
+                float: right;
+                .nav-items{
+                    & ul{
+                        list-style: none;
+                        & li{
+                            display: inline;
+                            margin-right: 10px;
+                            text-transform: uppercase;
+                            font-size: 10pt;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .hmb-nav{
+        display: none;
+    }
+
+    /* Hero Content */
+    .hero-content{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "slogan image"; 
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: center;
+        .hero-slogan{
+            grid-area: slogan;
+            text-align: left;
+            & h1{
+                font-size: 28pt;
+                color: white;
+                line-height: 35pt;
+                .orange{
+                    color: $orange;
+                    text-shadow: 1px 1px 1px white;
+                }
+            }
+            & h4{
+                margin-top: 25px;
+                font-size: 18pt;
+                color: white;
+                font-weight: 100;
+            }
+            button{
+                margin-top: 30px;
+            }
+        }
+        .hero-img{
+            grid-area: image;
+            & img{
+                height: 400px;
+            }
+        }
+    }
+
+    /* About */
+    #about{
+        .about-content{
+            padding-top: 50px;
+            height: auto;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-areas: "logo bio"; 
+            grid-template-columns: 0.5fr 1fr;
+            grid-template-rows: 1fr;
+            text-align: left;
+            height: 500px;
+            align-items: center;
+            justify-items: center;
+            .logo{
+                grid-area: logo;
+                & img{
+                    width: 80%;
+                }
+            }
+            .bio{
+                grid-area: bio;
+                & p{
+                    margin-top: 20px;
+                    text-align: justify;
+                    font-size: 12pt;
+                    line-height: 18pt;
+                }
+                & button{
+                    margin-top: 30px;
+                    color: $orange;
+                    font-size: 12pt;
+                    border: 1px solid $orange;
+                    padding: 1em;
+                    background: transparent; 
+                    & i{
+                        margin-top: -10px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Spaces */
+    #spaces{
+        .spaces-container{
+            padding: 5%; 
+            background: url("images/spaces_bg.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 420px;
+            .spaces-content{ 
+                background: rgba(0,0,0, 0.7);
+                text-align: center;
+                padding: 40px; 
+                & h2{
+                    color: $orange;
+                }
+                & p{
+                    color: white;
+                    margin-top: 20px;
+                    text-align: justify;
+                    font-size: 12pt;
+                    line-height: 16pt;
+                }
+            }
+        }
+    }
+
+    /* Coworking */
+    #coworking{
+        background-color: $light_grey;
+        .stats{
+            .col-4-stats{
+                padding-top: 20px;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-areas: "stats1 stats2 stats3 stats4";
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                .stats-1{
+                    grid-area: stats1;
+                }
+                .stats-2{
+                    grid-area: stats2;
+                }
+                .stats-3{
+                    grid-area: stats3;
+                }
+                .stats-4{
+                    grid-area: stats4;
+                }
+                .stats-1, .stats-2, .stats-3, .stats-4{
+                    background-color: white;
+                    padding: 30px;
+                    & img{
+                        height: 50px;
+                    }
+                    & h3{
+                        margin-top: 10px;
+                    }
+                    & p{
+                        font-size: 10pt;
+                        font-weight: 100;
+                    }
+                    & hr{
+                        margin-top: 10px;
+                    }
+                    .purple{
+                        color: $purple;
+                        background-color: $purple;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                    .yellow{
+                        color: $yellow;
+                        background-color: $yellow;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                    .blue{
+                        color: $blue;
+                        background-color: $blue;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                    .red{
+                        color: $red;
+                        background-color: $red;
+                        height: 5px;
+                        width: 25px;
+                        border: none;
+                    }
+                }
+            }
+        }
+        .coworking-content{
+            margin-top: 50px;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-areas: "title info";
+            grid-template-columns: 300px 1fr;
+            grid-template-rows: 1fr;
+            padding-bottom: 70px;
+            .coworking-title{
+                grid-area: title;
+                align-self: center;
+                justify-self: center;
+                & h2{
+                    font-size: 28pt;
+                    font-weight: bold;
+                    text-align: left;
+                    & .fa-heart{
+                        color: red;
+                        font-size: 12pt;
+                    }
+                }
+                & h4{
+                    font-size: 16pt;
+                    color: $purple;
+                    font-weight: 100;
+                    text-align: left;
+                    margin-top: 10px;
+                }
+            }
+            .coworking-info{
+                margin-top: 10px;
+                grid-area: info;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-areas: "img" 
+                                    "info";
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                .info1, .info2, .info3, .info4, .info5, .info6{
+                    margin-top: 10px;
+                    .info-img{
+                        text-align: center;
+                        & img{
+                            height: 50px;
+                        }
+                    }
+                    .info-text{
+                        text-align: center;
+                        & h5{
+                            font-weight: bold;
+                            margin-top: 10px;
+                        }
+                        & p{
+                            margin-top: 5px;
+                            font-weight: 100;
+                            font-size: 9pt;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Team */
+    #team{
+        .team-content{
+            padding-top: 50px;
+            .team-title{
+                text-align: center;
+                & h2{
+                    color: $orange;
+                }
+                & p{
+                    font-weight: 100;
+                    margin-top: 10px;
+                    line-height: 18pt;
+                }
+            }
+            .team-members{
+                margin-top: 35px;
+                text-align: center;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-areas: "member1 member2";
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                .member1, .member2{
+                    display: grid;
+                    grid-gap: 20px;
+                    grid-template-areas: "photo member-bio";
+                    grid-template-columns: 400px 1fr;
+                    grid-template-rows: 1fr 100px;
+                    .member-img{
+                        grid-area: photo;
+                        z-index: 1000;
+                        & img{
+                            height: 250px;
+                        }
+                    }
+                    .member-bio-container{
+                        grid-area: member-bio;
+                        background-color: $orange;
+                        width: 500px;
+                        height: 175px;
+                        margin-top: 75px;
+                        margin-left: 50px;
+                        position: absolute;
+                        .member-bio{
+                            float: right;
+                            padding-right: 75px;
+                            padding-top: 50px;
+                            color: white;
+                            & h3{
+                                font-size: 16pt;
+                            }
+                            & h6{
+                                font-weight: 100;
+                                font-size: 12pt;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+                .member1{
+                    grid-area: member1;
+                }
+                .member2{
+                    grid-area: member2;
+                }
+            }
+        }
+    }
+
+    /* Footer */
+    footer{
+        border-top: 1px solid $light_grey;
+        .footer-container{
+            padding-top: 20px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas: "social copyright stores"; 
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            align-items: center;
+            justify-items: center;
+            .social{
+                grid-area: social;
+                & img{
+                    height: 40px;
+                    margin-right: 5px;
+                }
+            }
+            .store{
+                grid-area: stores;
+                float: right;
+                & img{
+                    width: 100px;
+                    height: 30px;
+                    margin-bottom: 5px;
+                }
+            }
+            .copyright{
+                grid-area: copyright;
+                padding-top: 10px;
+                & p{
+                    font-size: 10pt;
+                    font-weight: 100;
+                    & .orange{
+                        color: $orange;
+                    }
+                }
+                    
+            }
+        }
+    }
+}
